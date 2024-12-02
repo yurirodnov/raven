@@ -1,8 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  border: 1px solid grey;
 }
 
 h1 {
