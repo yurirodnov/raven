@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Таргетируемая версия ECMAScript
+    "module": "commonjs", // Модульная система для Node.js
+    "strict": true, // Включаем строгую типизацию
+    "esModuleInterop": true, // Совместимость с ES модулями
+    "skipLibCheck": true, // Пропуск проверки типов в библиотеках
+    "forceConsistentCasingInFileNames": true, // Обеспечиваем одинаковое написание файлов
+    "outDir": "./dist" // Папка для скомпилированных файлов
+  },
+  "include": ["src/**/*.ts"] // Включаем все файлы .ts в папке src и её подкаталогах
+}
