@@ -1,2 +1,2 @@
-# Inspower
+# Raven
 Minimalistic static site generator
