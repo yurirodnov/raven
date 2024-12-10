@@ -1,5 +1,5 @@
 {
-  "name": "inspower",
+  "name": "raven",
   "version": "1.0.0",
   "description": "Minimalistic static site generator",
   "main": "index.js",

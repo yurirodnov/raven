@@ -4,9 +4,9 @@ import { marked } from 'marked';
 import ejs from 'ejs';
 
 
-const contentDir = path.join(__dirname, 'content');
+const contentDir = path.join(__dirname, 'content/posts');
 const outputDir = path.join(__dirname, 'output');
-const templatePath = path.join(__dirname, 'templates', 'index.html');
+const templatePath = path.join(__dirname, 'template', 'index.html');
 
 
 fs.ensureDirSync(outputDir);
