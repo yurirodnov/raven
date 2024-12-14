@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "live-server --open --port=8080 --watch='public/**/*.html, public/**/*.css, public/**/*.js'",
-    "serve": "serve ./output/post1.html",
-    "generate": "npx tsx ./src/generate.ts"
+    "serve": "serve ./src/output/index.html",
+    "generate": "npx tsx ./src/generate.ts",
+    "create": "npx tsx ./src/create.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "fs-extra": "^11.2.0",
     "glob": "^11.0.0",
