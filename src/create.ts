@@ -1,8 +1,9 @@
-import { createIndex, createAbout, createPosts } from './modules/createIndex';
+import { createIndex } from './modules/createIndex';
+import { createAbout } from './modules/createAbout';
 
 
 createIndex();
-// createAbout();
+createAbout();
 // createPosts();
 
 
