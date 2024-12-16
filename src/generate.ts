@@ -4,7 +4,7 @@ import { marked } from 'marked';
 import ejs from 'ejs';
 
 
-const contentDir = path.join(__dirname, 'content/s');
+const contentDir = path.join(__dirname, 'content');
 const outputDir = path.join(__dirname, 'output');
 const templatePath = path.join(__dirname, 'template', 'index.html');
 

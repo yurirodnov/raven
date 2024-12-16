@@ -3,30 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Юрин блог</title>
-    <link rel="stylesheet" href="../public/styles/styles.css" />
+    <title>Главная - Буквы и числа</title>
+    <link rel="stylesheet" href="./public/styles/styles.css" type="text/css" />
   </head>
   <body>
     <header class="header">
-      <h1>Главная</h1>
-      <nav>
-        <a href="/about.html">Зачем</a>
+      <div><a class="home-logo" href="/index.html">Буквы и числа</a></div>
+      <nav class="navigation">
+        <a href="/faq.html">FAQ</a>
         <a href="/posts_list.html">Статьи</a>
       </nav>
     </header>
-    <main>
-      <div>
+    <main class="index_content">
+      <div class="hi-block">
         <img
-          src="./public/images/cat_party.gif"
+          src="../public/images/cat_party.gif"
           alt="rave cat gif"
           width="100"
           heigt="100"
         />
-        <p><%- content %></p>
+        <p><i>Кто умножает знания, умножает скорбь</i></p>
       </div>
     </main>
     <footer class="footer">
-      Created with <a href="https://github.com/yurirodnov/raven">raven</a>
+      Сайт сделан с помощью&nbsp;<a
+        href="https://github.com/yurirodnov/raven"
+        target="_blank"
+        >raven</a
+      >
     </footer>
   </body>
 </html>
