@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Sixtyfour";
+  src: url(./../fonts/Sixtyfour-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Silkscreen";
+  src: url(./../fonts/Silkscreen-Bold.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +60,9 @@ a:hover {
   margin-left: 30px;
   display: flex;
   font-size: 24px;
-  color: white;
+  /* font-family: "Sixtyfour"; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: "Silkscreen";
 }
 
 .navigation {
@@ -61,7 +73,7 @@ a:hover {
 }
 
 .index-content,
-.faq-content,
+.about-content,
 .posts-list-content {
   width: 90%;
   margin-top: 30px;
@@ -73,7 +85,7 @@ a:hover {
   flex: 1;
 }
 
-.faq-content {
+.about-content {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -84,6 +96,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
+  gap: 50px;
 }
 
 .hi-block {
@@ -94,21 +107,10 @@ a:hover {
   gap: 20px;
 }
 
-.faq-block {
+.about-block {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.faq-block-row {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.faq-question {
-  color: white;
-  font-size: 1.2em;
 }
 
 .posts-list {
@@ -117,10 +119,6 @@ a:hover {
   gap: 20px;
 }
 
-.faq-content,
-.posts-list-content {
-  gap: 60px;
-}
 .footer {
   display: flex;
   justify-content: center;
