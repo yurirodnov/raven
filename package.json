@@ -4,29 +4,9 @@
   "description": "Minimalistic static site generator",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "live-server --open --port=8080 --watch='public/**/*.html, public/**/*.css, public/**/*.js'",
-    "serve": "serve ./src/output",
-    "generate": "npx tsx ./src/generate.ts",
-    "create": "npx tsx ./src/create.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
-    "fs-extra": "^11.2.0",
-    "glob": "^11.0.0",
-    "marked": "^15.0.3"
-  },
-  "devDependencies": {
-    "@types/ejs": "^3.1.5",
-    "@types/fs-extra": "^11.0.4",
-    "@types/marked": "^6.0.0",
-    "@types/node": "^22.10.1",
-    "live-server": "^1.2.0",
-    "serve": "^14.2.4",
-    "typescript": "^5.7.2"
-  }
+  "license": "ISC"
 }

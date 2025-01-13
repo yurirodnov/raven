@@ -33,13 +33,13 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(203, 203, 203); /* начальный цвет */
-  transition: color 0.3s ease; /* плавный переход */
+  color: rgb(203, 203, 203);
+  transition: color 0.3s ease;
 }
 
 a:hover {
   cursor: pointer;
-  color: white; /* цвет при наведении */
+  color: white;
 }
 
 /* a:visited {
@@ -60,9 +60,9 @@ a:hover {
   margin-left: 30px;
   display: flex;
   font-size: 24px;
-  /* font-family: "Sixtyfour"; */
+  font-family: "Sixtyfour";
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "Silkscreen";
+  /* font-family: "Silkscreen"; */
 }
 
 .navigation {
