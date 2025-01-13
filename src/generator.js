@@ -3,12 +3,13 @@ import { marked } from "marked";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs/promises";
+import { title } from "process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const mdPostsDir = path.resolve(__dirname, "content", "posts");
-const postTemplate = path.resolve(__dirname, "template", "posts", "post.html");
+const postTemplate = path.resolve(__dirname, "template", "posts", "post.ejs");
 const postsListFile = path.resolve(__dirname, "output", "posts_list.html");
 const outputDir = path.resolve(__dirname, "output", "posts");
 
@@ -35,14 +36,19 @@ const generatePosts = async () => {
       if (mdPost.endsWith(".md")) {
         const pathToMdPostFile = path.resolve(mdPostsDir, mdPost);
         const mdContent = await fs.readFile(pathToMdPostFile, "utf8");
-        const htmlContent = marked(mdContent);
+        const postContent = marked(mdContent);
+        const data = {
+          title: mdPost,
+          content: postContent,
+        };
         const htmlForNewPost = await fs.readFile(postTemplate, "utf8");
-
+        const formattedHtml = ejs.render(htmlForNewPost, data);
         const newHtmlPost = path.resolve(outputDir, formatFileName(mdPost));
-        await fs.writeFile(newHtmlPost, htmlForNewPost, "utf8");
+
+        await fs.writeFile(newHtmlPost, formattedHtml, "utf8");
 
         processedFilesCounter += 1;
-        console.log(newHtmlPost);
+        console.log(postContent);
         console.log(`${processedFilesCounter} / ${mdPosts.length} files processed `);
       }
     }
