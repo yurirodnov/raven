@@ -3,10 +3,18 @@
   "version": "1.0.0",
   "description": "Minimalistic static site generator",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "yargs": "^17.7.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "marked": "^15.0.6"
+  }
 }
