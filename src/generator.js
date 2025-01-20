@@ -11,6 +11,7 @@ const __dirname = path.dirname(__filename);
 const mdPostsDir = path.resolve(__dirname, "content", "posts");
 const postTemplate = path.resolve(__dirname, "template", "posts", "post.ejs");
 const postsListFile = path.resolve(__dirname, "output", "posts_list.html");
+const postsListTemplate = path.resolve(__dirname, "template", "posts_list.ejs");
 const outputDir = path.resolve(__dirname, "output", "posts");
 
 const formatFileName = (str) => {
@@ -29,7 +30,7 @@ const formatFileName = (str) => {
 const generatePosts = async () => {
   try {
     const mdPosts = await fs.readdir(mdPostsDir);
-
+    const links = [];
     let processedFilesCounter = 0;
 
     for (let mdPost of mdPosts) {
@@ -46,12 +47,21 @@ const generatePosts = async () => {
         const newHtmlPost = path.resolve(outputDir, formatFileName(mdPost));
 
         await fs.writeFile(newHtmlPost, formattedHtml, "utf8");
+        links.push({ title: mdPost, link: "./posts/" + path.basename(newHtmlPost) });
 
         processedFilesCounter += 1;
         console.log(postContent);
+        console.log(links);
         console.log(`${processedFilesCounter} / ${mdPosts.length} files processed `);
       }
     }
+
+    const postsListHtml = await ejs.renderFile(postsListTemplate, { links });
+
+    // Записываем результат в файл
+    const postsListFile = path.resolve(__dirname, "output", "posts_list.html");
+    await fs.writeFile(postsListFile, postsListHtml, "utf8");
+    // await fs.writeFile(postsListFile, postListTemplate, "utf8");
   } catch (error) {
     console.error("Generating error", error);
   }

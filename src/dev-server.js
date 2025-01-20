@@ -16,8 +16,12 @@ const argv = yargs(process.argv.slice(2)).options({
 }).argv;
 
 const staticDir = path.resolve(__dirname, argv.directory);
+const publicDir = path.resolve(__dirname, "public");
+const outputDir = path.resolve(__dirname, "output");
 
 app.use(express.static(staticDir));
+app.use(express.static(publicDir));
+app.use(express.static(outputDir));
 
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to the static site!</h1>");

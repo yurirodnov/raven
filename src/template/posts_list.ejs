@@ -3,21 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hello.md</title>
+    <title>Публикации</title>
     <link rel="stylesheet" href="/styles/styles.css" type="text/css" />
   </head>
   <body>
     <header class="header">
       <div><a class="home-logo" href="/index.html">my_site.html</a></div>
       <nav class="navigation">
-        <a href="/about.html">О сайте</a>
-        <a href="/posts_list.html">Публикации</a>
+        <a href="./about.html">О сайте</a>
+        <a href="./posts_list.html">Публикации</a>
       </nav>
     </header>
-    <main class="post_content">
-      <div><h1>Hello</h1>
-<p>da</p>
-</div>
+    <main class="posts-list-content">
+      <h3 class="posts-list-heading">Публикации</h3>
+      <div class="posts-list">
+        <% links.forEach(post => { %>
+        <a href="<%= post.link %>"><%= post.title %></a>
+        <% }) %>
+      </div>
     </main>
     <footer class="footer">Сайт сделан с помощью&nbsp;<a href="https://github.com/yurirodnov/raven" target="_blank">raven</a></footer>
   </body>

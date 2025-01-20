@@ -8,6 +8,16 @@
   src: url(./../fonts/Silkscreen-Bold.ttf);
 }
 
+@font-face {
+  font-family: "CabinSketch";
+  src: url(./../fonts/Cabin_Sketch/CabinSketch-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Pixelify";
+  src: url(./../fonts/PixelifySans-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +39,7 @@ body {
   background-color: rgb(23, 23, 23);
   color: rgb(203, 203, 203);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
 }
 
 a {
@@ -59,17 +70,20 @@ a:hover {
 .home-logo {
   margin-left: 30px;
   display: flex;
-  font-size: 24px;
-  font-family: "Sixtyfour";
+  font-size: 38px;
+
+  font-family: "CabinSketch";
+  /* font-family: "Sixtyfour"; */
   /* font-family: Arial, Helvetica, sans-serif; */
   /* font-family: "Silkscreen"; */
+  /* font-family: "Pixelify"; */
 }
 
 .navigation {
   display: flex;
   gap: 25px;
   margin-right: 30px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .index-content,
