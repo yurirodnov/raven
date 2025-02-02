@@ -26,7 +26,7 @@ const formatFileName = (str) => {
 };
 
 const formatFileCreationDate = (dateObj) => {
-  return dateObj.toISOString().split("T")[0];
+  return dateObj.toISOString().split("T")[0].split("-").join(".");
 };
 
 const getHeadingFromMd = (str) => {
