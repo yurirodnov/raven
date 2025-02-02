@@ -85,10 +85,23 @@ a:hover {
   font-size: 20px;
 }
 
-.kitten {
+/* .kitten {
   -webkit-box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
   -moz-box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
   box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
+} */
+
+img {
+  -webkit-box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
+  -moz-box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
+  box-shadow: 4px 6px 8px -4px rgba(221, 221, 221, 0.2);
+}
+
+.hmmm {
+  width: 600px;
+  display: flex;
+  align-self: center;
+  margin-top: 70px;
 }
 
 .index-content,
@@ -131,6 +144,15 @@ a:hover {
   display: flex;
   flex-direction: column;
   line-height: 1;
+}
+
+.post-in-list {
+  display: flex;
+  gap: 10px;
+}
+
+.post-data {
+  color: gray;
 }
 
 .hi-block {

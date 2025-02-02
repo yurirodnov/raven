@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <div><a class="home-logo" href="/index.html">my_site.html</a></div>
+      <div><a class="home-logo" href="/index.html">yuri_rodnov.html</a></div>
       <nav class="navigation">
         <a href="./about.html">О сайте</a>
         <a href="./posts_list.html">Публикации</a>
@@ -18,7 +18,7 @@
       <h1 class="posts-list-heading">Публикации</h1>
       <div class="posts-list">
         <% links.forEach(post => { %>
-        <a href="<%= post.link %>"><%= post.title %></a>
+        <div class="post-in-list"><span class="post-data"><%= post.postData %></span><span> - </span><a href="<%= post.link %>"><%= post.title %></a></div>
         <% }) %>
       </div>
     </main>

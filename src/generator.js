@@ -25,6 +25,10 @@ const formatFileName = (str) => {
   return newName + ".html";
 };
 
+const formatFileCreationDate = (dateObj) => {
+  return dateObj.toISOString().split("T")[0];
+};
+
 const getHeadingFromMd = (str) => {
   let newHeading = str.split("\n")[0].replace(/<\/?[^>]+(>|$)/g, "");
   return newHeading;
@@ -45,6 +49,8 @@ const generatePosts = async () => {
         const pathToMdPostFile = path.resolve(mdPostsDir, mdPost);
         // get .md-content from file
         const mdContent = await fs.readFile(pathToMdPostFile, "utf8");
+        const mdContentCreation = (await fs.stat(pathToMdPostFile)).birthtime;
+        console.log(formatFileCreationDate(mdContentCreation));
         // convert .md to .html
         const postContent = marked(mdContent);
 
@@ -63,7 +69,7 @@ const generatePosts = async () => {
         // create html-file with post content
         await fs.writeFile(newHtmlPost, formattedHtml, "utf8");
         // add post's link to array
-        links.push({ title: getHeadingFromMd(postContent), link: "./posts/" + path.basename(newHtmlPost) });
+        links.push({ title: getHeadingFromMd(postContent), link: "./posts/" + path.basename(newHtmlPost), postData: formatFileCreationDate(mdContentCreation) });
 
         processedFilesCounter += 1;
         // console.log(postContent.split("\n"));
